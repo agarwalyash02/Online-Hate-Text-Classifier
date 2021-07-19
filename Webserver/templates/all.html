@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="shortcut icon" href="../static/favicon.ico">
+	<title>
+		Hate Detection WebUI
+	</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<style>
+.heading{
+	font-weight: 100;
+	font-size: 4em;
+	text-shadow: 1px 1px 5px black;
+}
+
+img{
+	height: 90%;
+	width: 100%;
+}
+
+.text{
+	font-size: 32px;
+	font-style: italic;
+}
+
+</style>
+
+</head>
+<body>
+		<div class="container">
+			<div class="jumbotron">
+				<div class="container">
+					<h1 class="heading">Minor Project II</h1>
+					<p>WebUI for hate detection</p>
+					<p>Connected with the server <b>{{ip_addr['address']}}</b></p>
+				</div>
+			</div>
+
+			<form class="form-inline" method="POST" action='/'>
+				<label><b>Enter the text to test: &nbsp;&nbsp;  </b></label>
+				<textarea class="form-control" rows = "2" cols = "30" name = "des"></textarea>
+         		<br>
+				</br>&nbsp;&nbsp;
+				<button class="btn btn-primary" type="submit">Submit</button>
+			
+			</form>
+		
+			<br>
+			<br>
+
+			{% if your_result %}
+				<div class="row">
+					<div class="col-sm-8">
+						<p>Your text is classified in the category of <b>{{your_result['ans']}} speech</b></p>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+
+</body>
+</html>
