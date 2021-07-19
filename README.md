@@ -10,6 +10,7 @@ In today’s generation, everyone is connected through the internet. We can shar
 * Insult
 * Toxicity
 * Personal attacks
+
 There is a way to remove this negativity. We will detect the above issues and remove them with the help of machine learning and automated processes.
 \We will develop a web application that will detect hateful content from a sentence and tell if the sentence is offensive. The word is stated as offensive depending on the context of the word in the sentence.
 
